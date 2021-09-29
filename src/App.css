@@ -1,38 +1,264 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+h2{
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  opacity: .8;
+}
+label{
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+}
+input{
+  width: 100%;
+  padding: 7px 5px;
+  font-size: 18px;
+  border: 1px solid #D2D2D2;
+}
+input:focus{
+  outline: 2px solid #00C2FF;
+  border: 1px solid #D2D2D2;
+  border-radius: 0;
+}
+.input50{
+  width: 47.8%;
+}
+textarea{
+  width: 100%;
+  min-height: 120px;
+  padding: 7px 5px;
+  font-size: 18px;
+  border: 1px solid #D2D2D2;
+}
+textarea:focus{
+  outline: 2px solid #00C2FF;
+  border: 1px solid #D2D2D2;
+  border-radius: 0;
+}
+.btn{
+  margin-top: 10px;
+  outline: 0;
+  border: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  padding: 5px 10px;
+  color:white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.btn span{
+  margin: 0 5px;
+}
+.btn-prev{
+ margin-right: 5px;
+ background-color:#8D8D8D;
+ transition: 0.2s linear background;
+}
+.btn-prev:hover{
+ background-color:#7e7b7b;
+}
+.btn-next{
+  margin-left: 5px;
+  background: #00C2FF;
+  transition: 0.2s linear background;
+}
+.btn-next:hover{
+  background: #02b2e7;
+}
+.disabled{
+  cursor: not-allowed !important;
+}
+.icon{
+  color: #00C2FF;
+  margin-right: 10px;
+}
+section{
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url('./assests/background3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form{
+  width: 900px;
+  min-height: 450px;
+  margin-top: 150px;
+}
+.form .form-content{
+  width: 100%;
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  opacity: .7;
+}
+.form-group{
+  width: 100%;
+  margin: 0 20px 20px 20px;
+}
+.text-field{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* Progress Steps css */
+.progress-steps{
+  position: absolute;
+  width: 489px;
+  height: 50px;
+  left: 50%;
+  top: 88px;
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-50%);
+}
+.progress-steps .step{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+.progress-steps .step .step-text{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  font-weight: 700;
+  font-size: 18px;
+}
+.progress-steps .step .step-line{
+  width: 100px;
+  border: 2px solid #E3E3E3;
+  position: absolute;
+  top: 50%;
+  right: -100px;
+}
+.progress-steps .step-active{
+  border: 3px solid #00C2FF;
+}
+.progress-steps .step-active .step-line-active{
+  border: 2px solid #00C2FF;
+}
+.progress-steps .step-active .fa-check{
+  color: #00C2FF;
+}
+
+
+/* Home page css */
+.home-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-group{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.content-group h4{
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 33px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.content-group h4 span{
+  color: #00C2FF;
+}
+.content-group .resume-btn{
+  margin-top: 20px;
+  padding:10px 5px;
+  font-size: 18px;
+  outline: 0;
+  border: 0;
+  background: #00C2FF;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .3s all ease-in-out;
+}
+.content-group .resume-btn .btn-title{
+  padding:0 10px;
+  color: white;
+  font-weight: 500;
+}
+.content-group .resume-btn:hover{
+  background-color: white;
+}
+.content-group .resume-btn:hover .btn-title{
+  color: #00C2FF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* educational-section css */
+.educational-section .educational-btn{
+  margin-left: 20px;
+  outline: 0;
+  border: 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  padding: 5px 10px;
+  background-color:#00C2FF;
+  color:white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.educational-section .educational-btn i{
+  margin-right: 10px;
+}
+.educational-section .educational-output{
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  opacity: .7;
+}
+.educational-section .educational-output .educational-output-group{
+  margin-left: 20px;
+  padding-bottom: 12px;
+}
+.educational-section .educational-output .educational-output-group h6{
+  font-weight: bold;
+}
+.educational-section .educational-output .educational-output-group h3{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* download-section css */
+.download-section .download-content{
+  width: 900px;
+  min-height: 170px;
+  background: #65FEB4;
+  padding: 10px;
+  border-radius: 8px;
+  opacity: .7;
+  text-align: center;
+}
+.download-section .download-content h2{
+  color: black;
+  margin-top: 30px;
+}
+.download-section .download-content h2 span{
+  color: #00C2FF;
 }
